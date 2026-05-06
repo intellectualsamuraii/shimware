@@ -1,0 +1,14 @@
+[project]
+name = "shimware"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "angr>=9.2.213",
+    "unicorn>=2.1.4",
+]
+
+[tool.basedpyright]
+include = []
+exclude = []
+
+typeCheckingMode = "standard"

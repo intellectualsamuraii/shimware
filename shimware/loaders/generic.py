@@ -2,7 +2,6 @@ import angr
 from cle.backends import NamedRegion
 import logging
 import claripy
-from angr.analyses.cfg import CFGUtils
 from ..shim_finder_ng.util import get_function_arg_names
 l = logging.getLogger("shimware.loaders.generic")
 

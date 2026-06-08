@@ -1,7 +1,7 @@
 import angr
 import sys
 import threading
-import nose
+# import nose
 #import dive
 from .dynamic_taint.taint_tracking import *
 from .dynamic_taint.dfs import DFS

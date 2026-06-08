@@ -1,10 +1,12 @@
 [project]
 name = "shimware"
 version = "0.1.0"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
-    "angr>=9.2.213",
-    "unicorn>=2.1.4",
+    "angr==9.2.42",
+    "cffi==1.17.1",
+    "pycparser==2.22",
+    "setuptools<81",
 ]
 
 [tool.basedpyright]

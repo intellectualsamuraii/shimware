@@ -1,7 +1,10 @@
 import angr
+# from angr.analyses.cfg import CFGUtils # NOTE: This was all thats necessary AAAAAAARGH
+# import angr.analyses.cfg.cfg_utils
 from cle.backends import NamedRegion
 import logging
 import claripy
+from angr.analyses.cfg import CFGUtils
 from ..shim_finder_ng.util import get_function_arg_names
 l = logging.getLogger("shimware.loaders.generic")
 
@@ -11,10 +14,10 @@ def load_it(fname, arch=None, base_addr=None, entry_point=None, mmio_regions=[])
 
     else:
         p = angr.Project(fname, main_opts={'base_addr': base_addr, 'arch': arch, 'backend': 'blob', 'entry_point': entry_point})
-    region_count = 0
-    for start, end in mmio_regions:
-        region = NamedRegion("mmio%d" % region_count, start, end)
-        p.loader.dynamic_load(region)
+    # region_count = 0
+    # for start, end in mmio_regions:
+    #     region = NamedRegion("mmio%d" % region_count, start, end)
+    #     p.loader.dynamic_load(region)
     # TODO: Stack locatio
     return p
 
